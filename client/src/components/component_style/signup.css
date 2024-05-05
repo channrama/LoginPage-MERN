@@ -1,37 +1,89 @@
-.form {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  input[type="password"],
-  input[type="submit"] {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+.signup-container {
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.signup-heading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: center;
+}
+
+.login-link:hover {
+  color: #0056b3;
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeOut 5s ease;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
