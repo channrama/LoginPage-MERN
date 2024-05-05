@@ -6,6 +6,7 @@ import Axios from 'axios';
 function Login() {
   const [name, setusername] = useState("");
   const [password, setpassword] = useState("");
+  const[data,setdata]=useState("")
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name ||  !password) {
@@ -15,9 +16,10 @@ function Login() {
     Axios.post("http://localhost:8080/auth/login", {  username:name, password })
       .then(response => { 
         setdata(response.data)
-
-      
-        setusername(""); 
+        { setTimeout(() => {
+          setdata("")
+          }, 5000)}
+       setusername(""); 
         setpassword("");
       })
       .catch(err => { 
@@ -29,11 +31,12 @@ function Login() {
   return (
     <>
       <h1>Login</h1>
-      <form >
+      <form onSubmit={handleSubmit}>
         <div className="form">
           <input type="text" placeholder="Username" name="username" value={name} onChange={(e) => setusername(e.target.value)} />
           <input type="password" name="password" id="pass" placeholder="Password" value={password} onChange={(e) => setpassword(e.target.value)} />
           <input type="submit" value="Login" />
+          <p>{data}</p>
           <NavLink to="/signup" activeClassName="active">create account</NavLink>
         </div>
       </form>
