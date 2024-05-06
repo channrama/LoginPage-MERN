@@ -35,9 +35,11 @@ function Login() {
         <div className="form">
           <input type="text" placeholder="Username" name="username" value={name} onChange={(e) => setusername(e.target.value)} className="form-input" />
           <input type="password" name="password" id="pass" placeholder="Password" value={password} onChange={(e) => setpassword(e.target.value)} className="form-input" />
-          <input type="submit" value="Login" className="submit-button" />
-          <p className="error-message">{data}</p>
+        <div class="both">
+        <input type="submit" value="Login" className="submit-button" />
           <NavLink to="/signup" activeClassName="active" className="signup-link">Create an account</NavLink>
+          </div> 
+          <p className="error-message">{data}</p>
         </div>
       </form>
     </div>

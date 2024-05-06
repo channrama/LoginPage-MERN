@@ -1,5 +1,5 @@
 .login-container {
-    max-width: 400px;
+    max-width: 250px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -31,7 +31,7 @@
     padding: 10px;
     background-color: #007bff;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -44,9 +44,10 @@
   
   .error-message {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 20px;
     color: #ff0000;
     text-align: center;
+    background-color: #fff;
   }
   
   .signup-link {
@@ -60,4 +61,7 @@
   .signup-link:hover {
     color: #0056b3;
   }
-  
+  .both{
+    display: flex;
+    gap: 20px;
+  }
