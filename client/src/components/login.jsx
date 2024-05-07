@@ -38,6 +38,7 @@ function Login() {
         <div class="both">
         <input type="submit" value="Login" className="submit-button" />
           <NavLink to="/signup" activeClassName="active" className="signup-link">Create an account</NavLink>
+          <NavLink to="/email" activeClassName="active" className="signup-link">forgotpasword?</NavLink>
           </div> 
           <p className="error-message">{data}</p>
         </div>

@@ -7,10 +7,10 @@ UserLogin.post("/login", async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        // Check if username exists
+        
         const user = await UserModel.findOne({ username });
         if (user) {
-            // If username exists, compare passwords
+           
             const match = await bcrypt.compare(password, user.password);
             if (match) {
                 res.send("Welcome");
@@ -26,4 +26,4 @@ UserLogin.post("/login", async (req, res) => {
     }
 });
 
-module.exports = UserLogin;
+module.exports = UserLogin
